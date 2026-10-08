@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="查询、筛选、收藏并管理自定义校园学习空间。">
+  <title>空间查询｜云大学习空间助手</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="libs/bootstrap-5.3.8.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body data-page="spaces">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><nav class="navbar navbar-expand-lg" aria-label="主导航"><div class="container">
+    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" alt=""><span>云大学习空间助手</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="展开导航"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+      <li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">首页</a></li><li class="nav-item"><a class="nav-link" data-nav="spaces" href="spaces.html">空间查询</a></li><li class="nav-item"><a class="nav-link" data-nav="plans" href="plans.html">学习计划</a></li><li class="nav-item"><a class="nav-link" data-nav="insights" href="insights.html">数据洞察</a></li><li class="nav-item"><a class="nav-link" data-nav="campus" href="campus.html">三维校园</a></li><li class="nav-item ms-lg-2"><button class="btn btn-sm theme-button" id="themeToggle" type="button" aria-pressed="false">◐ 夜间</button></li>
+    </ul></div>
+  </div></nav></header>
+
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Find a space</p><h1>空间查询与管理</h1><p>按地点、状态和剩余座位筛选。收藏的地点以及自己新增的临时地点会保存在当前浏览器。</p></div></section>
+    <div class="page-main"><div class="container">
+      <div id="spaceStatusMessage" class="status-banner mb-4" role="status" aria-live="polite">正在读取空间数据……</div>
+
+      <section class="panel mb-4" aria-labelledby="filterTitle">
+        <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center mb-3"><div><h2 id="filterTitle" class="mb-1">筛选条件</h2><p class="result-meta mb-0">输入内容后会立即更新，不需要额外提交。</p></div><button class="btn btn-outline-brand" id="resetFilters" type="button">清空筛选</button></div>
+        <div class="filter-grid">
+          <div><label class="form-label" for="keyword">名称或楼宇</label><input class="form-control" id="keyword" type="search" placeholder="例如：图书馆、静音"></div>
+          <div><label class="form-label" for="buildingFilter">楼宇</label><select class="form-select" id="buildingFilter"><option value="all">全部楼宇</option></select></div>
+          <div><label class="form-label" for="statusFilter">开放状态</label><select class="form-select" id="statusFilter"><option value="all">全部状态</option><option value="开放">开放</option><option value="维修">维修</option><option value="闭馆">闭馆</option></select></div>
+          <div><label class="form-label" for="seatNeed">至少空位</label><input class="form-control" id="seatNeed" type="number" min="0" max="999" value="0"></div>
+        </div>
+        <div class="form-check mt-3"><input class="form-check-input" id="favoriteOnly" type="checkbox"><label class="form-check-label" for="favoriteOnly">只看已收藏空间</label></div>
+      </section>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+        <p class="result-meta mb-0" id="spaceResult" aria-live="polite">共找到 0 个空间。</p>
+        <button class="btn btn-brand" type="button" data-bs-toggle="collapse" data-bs-target="#spaceEditor" aria-expanded="false" aria-controls="spaceEditor">＋ 新增自定义空间</button>
+      </div>
+
+      <section class="collapse mb-4" id="spaceEditor" aria-labelledby="editorTitle"><div class="panel">
+        <div class="d-flex justify-content-between align-items-center gap-2"><h2 id="editorTitle">新增自定义空间</h2><button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target="#spaceEditor" aria-label="关闭编辑表单"></button></div>
+        <form id="spaceForm" novalidate><input id="editingId" type="hidden">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="spaceName">空间名称 *</label><input class="form-control" id="spaceName" maxlength="30" required><div class="invalid-feedback">请填写 2—30 个字的空间名称。</div></div>
+            <div class="col-md-3"><label class="form-label" for="spaceBuilding">楼宇 *</label><input class="form-control" id="spaceBuilding" maxlength="15" required></div>
+            <div class="col-md-3"><label class="form-label" for="spaceFloor">楼层 *</label><input class="form-control" id="spaceFloor" type="number" min="-2" max="99" value="1" required></div>
+            <div class="col-6 col-md-3"><label class="form-label" for="spaceSeats">总座位 *</label><input class="form-control" id="spaceSeats" type="number" min="1" max="9999" value="40" required></div>
+            <div class="col-6 col-md-3"><label class="form-label" for="spaceOccupied">已占用 *</label><input class="form-control" id="spaceOccupied" type="number" min="0" max="9999" value="0" required></div>
+            <div class="col-md-3"><label class="form-label" for="spaceOpenStatus">状态</label><select class="form-select" id="spaceOpenStatus"><option>开放</option><option>维修</option><option>闭馆</option></select></div>
+            <div class="col-md-3"><label class="form-label" for="spaceQuiet">安静程度</label><select class="form-select" id="spaceQuiet"><option value="1">1 - 较活跃</option><option value="2">2</option><option value="3" selected>3 - 适中</option><option value="4">4</option><option value="5">5 - 很安静</option></select></div>
+            <div class="col-md-6"><label class="form-label" for="spaceHours">开放时间 *</label><input class="form-control" id="spaceHours" value="08:00-22:00" maxlength="30" required></div>
+            <div class="col-md-6"><label class="form-label" for="spaceFeatures">设施（用逗号分隔）</label><input class="form-control" id="spaceFeatures" placeholder="插座, 饮水机"></div>
+          </div>
+          <p class="mt-3 mb-2 text-danger" id="spaceFormError" role="alert"></p>
+          <div class="d-flex flex-wrap gap-2"><button class="btn btn-brand" type="submit">保存空间</button><button class="btn btn-outline-secondary" id="cancelEdit" type="button">重置表单</button></div>
+        </form>
+      </div></section>
+
+      <section aria-labelledby="resultsTitle"><h2 class="visually-hidden" id="resultsTitle">查询结果</h2><div class="space-grid" id="spaceList"></div></section>
+
+      <div class="callout mt-4"><strong>异常状态演示：</strong>在地址后加入 <code class="code-inline">?state=empty</code>、<code class="code-inline">?state=offline</code> 或 <code class="code-inline">?state=malformed</code>，可分别检查空数据、加载失败和格式错误提示。</div>
+    </div></div>
+  </main>
+
+  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>© <span data-current-year></span> 云大学习空间助手</span><a href="index.html">返回首页</a></div></footer>
+  <script src="libs/bootstrap-5.3.8.bundle.min.js" defer></script><script src="libs/jquery-3.7.1.min.js" defer></script><script src="assets/js/common.js" defer></script><script src="assets/js/spaces.js" defer></script>
+</body>
+</html>
+

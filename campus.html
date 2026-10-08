@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="可旋转、缩放和选择地标的三维校园学习空间场景。"><title>三维校园｜云大学习空间助手</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="libs/bootstrap-5.3.8.min.css"><link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body data-page="campus">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><nav class="navbar navbar-expand-lg" aria-label="主导航"><div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" alt=""><span>云大学习空间助手</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="展开导航"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1"><li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">首页</a></li><li class="nav-item"><a class="nav-link" data-nav="spaces" href="spaces.html">空间查询</a></li><li class="nav-item"><a class="nav-link" data-nav="plans" href="plans.html">学习计划</a></li><li class="nav-item"><a class="nav-link" data-nav="insights" href="insights.html">数据洞察</a></li><li class="nav-item"><a class="nav-link" data-nav="campus" href="campus.html">三维校园</a></li><li class="nav-item ms-lg-2"><button class="btn btn-sm theme-button" id="themeToggle" type="button" aria-pressed="false">◐ 夜间</button></li></ul></div></div></nav></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Interactive 3D campus</p><h1>三维校园空间索引</h1><p>场景不是装饰动画，而是把几类学习空间放进同一个位置关系中。可以拖动旋转、滚轮缩放、点击建筑或使用下方按钮定位。</p></div></section>
+    <div class="page-main"><div class="container">
+      <div id="campusStatus" class="status-banner mb-4" role="status" aria-live="polite">正在读取三维地标数据……</div>
+      <div class="row g-4">
+        <div class="col-xl-9"><section class="scene-shell" aria-labelledby="sceneTitle"><div class="scene-help"><strong id="sceneTitle">操作说明</strong><span>鼠标拖动旋转 · 滚轮缩放 · 点击建筑选择地标</span></div><div id="campusScene" tabindex="0" role="application" aria-label="可交互的三维校园场景"></div></section></div>
+        <div class="col-xl-3"><aside class="panel h-100" aria-labelledby="landmarkName"><p class="eyebrow">Selected place</p><h2 id="landmarkName">校园全景</h2><p id="landmarkDescription">场景加载后可选择建筑查看说明。</p><hr><div class="form-check form-switch mb-3"><input class="form-check-input" id="autoRotate" type="checkbox"><label class="form-check-label" for="autoRotate">自动缓慢旋转</label></div><button class="btn btn-outline-brand w-100" id="resetScene" type="button">恢复全景视角</button><h3 class="h6 mt-4">地标快捷入口</h3><div class="landmark-buttons" id="landmarkButtons"></div></aside></div>
+      </div>
+      <section class="panel mt-4" aria-labelledby="fallbackTitle"><h2 id="fallbackTitle">文字版地标清单</h2><p class="chart-note">即使浏览器不支持 WebGL，地点名称和说明仍然可以阅读。</p><div class="row g-3" id="landmarkTextList"></div></section>
+      <div class="callout mt-4"><strong>主题关联：</strong>找学习空间不仅要看剩余座位，也要理解图书馆、教学楼等地点的大致关系。三维区域把查询页里的抽象名称变成可浏览的空间索引。</div>
+    </div></div>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>© <span data-current-year></span> 云大学习空间助手</span><span>Three.js 本地渲染 · 无外部模型</span></div></footer>
+  <script src="libs/bootstrap-5.3.8.bundle.min.js" defer></script><script src="libs/jquery-3.7.1.min.js" defer></script><script src="libs/three-0.128.0.min.js" defer></script><script src="libs/OrbitControls-0.128.0.js" defer></script><script src="assets/js/common.js" defer></script><script src="assets/js/campus.js" defer></script>
+</body>
+</html>
+

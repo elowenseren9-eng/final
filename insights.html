@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通过折线图、环形图和柱状图查看校园学习数据。"><title>数据洞察｜云大学习空间助手</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="libs/bootstrap-5.3.8.min.css"><link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body data-page="insights">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><nav class="navbar navbar-expand-lg" aria-label="主导航"><div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" alt=""><span>云大学习空间助手</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="展开导航"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1"><li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">首页</a></li><li class="nav-item"><a class="nav-link" data-nav="spaces" href="spaces.html">空间查询</a></li><li class="nav-item"><a class="nav-link" data-nav="plans" href="plans.html">学习计划</a></li><li class="nav-item"><a class="nav-link" data-nav="insights" href="insights.html">数据洞察</a></li><li class="nav-item"><a class="nav-link" data-nav="campus" href="campus.html">三维校园</a></li><li class="nav-item ms-lg-2"><button class="btn btn-sm theme-button" id="themeToggle" type="button" aria-pressed="false">◐ 夜间</button></li></ul></div></div></nav></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Data insights</p><h1>学习数据洞察</h1><p>用折线图观察一周变化，用环形图比较学习目的，再用柱状图查看不同时段热度。下方保留原始数值，方便核对图表是否画对。</p></div></section>
+    <div class="page-main"><div class="container">
+      <div id="insightStatus" class="status-banner mb-4" role="status" aria-live="polite">正在读取图表数据……</div>
+      <div class="row g-4">
+        <div class="col-lg-7"><section class="panel h-100" aria-labelledby="flowTitle"><h2 id="flowTitle">一周到访趋势</h2><p class="chart-note">单位：演示人次；折线适合看连续七天的变化方向。</p><div class="chart-box" id="flowChart" role="img" aria-label="一周到访趋势折线图"></div></section></div>
+        <div class="col-lg-5"><section class="panel h-100" aria-labelledby="typeTitle"><h2 id="typeTitle">学习目的构成</h2><p class="chart-note">单位：百分比；环形图适合比较整体内部的占比。</p><div class="chart-box" id="typeChart" role="img" aria-label="学习目的构成环形图"></div></section></div>
+        <div class="col-12"><section class="panel" aria-labelledby="slotTitle"><h2 id="slotTitle">分时段热度</h2><p class="chart-note">单位：热度指数；柱状图便于横向比较各个离散时段。</p><div class="chart-box" id="slotChart" role="img" aria-label="分时段学习热度柱状图"></div></section></div>
+      </div>
+
+      <section class="panel mt-4" aria-labelledby="checkTitle"><div class="d-flex flex-wrap justify-content-between gap-2 align-items-end mb-3"><div><h2 id="checkTitle">数据核验表</h2><p class="chart-note mb-0">数值直接来自 <code class="code-inline">data/campus.json</code> 和 <code class="code-inline">data/spaces.json</code>。</p></div><button class="btn btn-outline-brand" id="downloadSummary" type="button">下载统计摘要</button></div><div class="table-responsive"><table class="table data-check-table"><caption class="visually-hidden">图表原始数据和计算结果</caption><thead><tr><th scope="col">核验项目</th><th scope="col">原始/计算数值</th><th scope="col">核验方法</th></tr></thead><tbody id="checkTable"></tbody></table></div></section>
+      <div class="callout mt-4"><strong>异常状态演示：</strong>地址加入 <code class="code-inline">?state=empty</code> 或 <code class="code-inline">?state=offline</code> 后，图表会显示空状态或错误提示，不会用默认数字掩盖问题。</div>
+    </div></div>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>© <span data-current-year></span> 云大学习空间助手</span><span>图表数据为课程演示数据</span></div></footer>
+  <script src="libs/bootstrap-5.3.8.bundle.min.js" defer></script><script src="libs/jquery-3.7.1.min.js" defer></script><script src="libs/echarts-5.6.0.min.js" defer></script><script src="assets/js/common.js" defer></script><script src="assets/js/insights.js" defer></script>
+</body>
+</html>
+
