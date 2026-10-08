@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" role="img" aria-labelledby="title desc">
+  <title id="title">校园学习空间插图</title>
+  <desc id="desc">原创的校园建筑、树木、人物与数据卡片插图</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dff4ed"/><stop offset="1" stop-color="#fff8e8"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="820" height="520" rx="36" fill="url(#sky)"/>
+  <circle cx="690" cy="85" r="46" fill="#efb84c" opacity=".9"/>
+  <path d="M0 392Q180 330 340 390T820 365V520H0Z" fill="#8bc5a9"/>
+  <g filter="url(#shadow)">
+    <path d="M210 330V170l185-95 185 95v160" fill="#f8f4e9" stroke="#174a3e" stroke-width="8"/>
+    <path d="M182 177L395 63l213 114" fill="none" stroke="#174a3e" stroke-width="12" stroke-linecap="round"/>
+    <rect x="255" y="195" width="72" height="68" rx="8" fill="#b9ddd0"/>
+    <rect x="360" y="195" width="72" height="68" rx="8" fill="#b9ddd0"/>
+    <rect x="465" y="195" width="72" height="68" rx="8" fill="#b9ddd0"/>
+    <path d="M353 330v-45q0-42 42-42t42 42v45" fill="#efb84c" stroke="#174a3e" stroke-width="7"/>
+  </g>
+  <g fill="#174a3e"><circle cx="118" cy="317" r="30"/><rect x="108" y="336" width="20" height="80" rx="8"/><circle cx="700" cy="318" r="36"/><rect x="688" y="349" width="24" height="76" rx="9"/></g>
+  <g transform="translate(575 308)" filter="url(#shadow)"><rect width="196" height="116" rx="22" fill="#fff"/><path d="M24 82l36-28 34 17 40-45 38 25" fill="none" stroke="#16785f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="134" cy="26" r="8" fill="#efb84c"/></g>
+  <g transform="translate(70 110)" filter="url(#shadow)"><rect width="182" height="92" rx="22" fill="#fff"/><text x="24" y="39" font-family="Microsoft YaHei,sans-serif" font-size="18" fill="#52736a">当前可用座位</text><text x="24" y="73" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#16785f">326</text></g>
+</svg>
+

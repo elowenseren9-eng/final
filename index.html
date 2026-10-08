@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="云大学习空间助手：校园学习空间查询、计划管理、数据洞察和三维校园展示。">
+  <title>首页｜云大学习空间助手</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="libs/bootstrap-5.3.8.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="主导航">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" alt=""><span>云大学习空间助手</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="展开导航"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" data-nav="home" href="index.html">首页</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav="spaces" href="spaces.html">空间查询</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav="plans" href="plans.html">学习计划</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav="insights" href="insights.html">数据洞察</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav="campus" href="campus.html">三维校园</a></li>
+            <li class="nav-item ms-lg-2"><button class="btn btn-sm theme-button" id="themeToggle" type="button" aria-pressed="false">◐ 夜间</button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="eyebrow">Campus learning companion</p>
+            <h1 class="display-title">找空间，排计划，<br><span>把时间用明白。</span></h1>
+            <p class="lead-copy mt-4">把分散的自习空间信息、个人计划和学习趋势放在同一处。数据是教学演示数据，但查询、管理、统计和三维交互都可以真实操作。</p>
+            <div class="hero-actions mt-4">
+              <a class="btn btn-brand btn-lg" href="spaces.html">开始查询空间</a>
+              <a class="btn btn-outline-brand btn-lg" href="plans.html">安排学习计划</a>
+            </div>
+          </div>
+          <div class="col-lg-6"><img class="hero-art" src="assets/img/hero-campus.svg" alt="校园建筑、人物和学习数据卡片组成的插图"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="overviewTitle">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Live overview</p>
+          <h2 id="overviewTitle">先看今天的大致情况</h2>
+          <p>以下数字由本地 JSON 读取并现场计算。它们是课程演示数据，不等同于学校实时统计。</p>
+        </div>
+        <div id="homeStatus" class="status-banner mb-4" role="status" aria-live="polite">正在读取本地数据……</div>
+        <div class="row g-3" aria-label="学习空间数据概览">
+          <div class="col-6 col-lg-3"><div class="metric-card"><span class="metric-label">开放空间</span><strong class="metric-value" id="metricOpen">—</strong><span class="metric-note">当前演示状态</span></div></div>
+          <div class="col-6 col-lg-3"><div class="metric-card"><span class="metric-label">剩余座位</span><strong class="metric-value" id="metricAvailable">—</strong><span class="metric-note">开放空间合计</span></div></div>
+          <div class="col-6 col-lg-3"><div class="metric-card"><span class="metric-label">平均使用率</span><strong class="metric-value"><span id="metricRate">—</span>%</strong><span class="metric-note">由座位数据计算</span></div></div>
+          <div class="col-6 col-lg-3"><div class="metric-card"><span class="metric-label">我的待办</span><strong class="metric-value" id="metricPending">0</strong><span class="metric-note">保存在当前浏览器</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featuresTitle">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Five connected pages</p>
+          <h2 id="featuresTitle">五个页面，共用一套数据和导航</h2>
+          <p>每个页面解决一个具体问题，同时可以从任意页面继续前往其他模块。</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl"><article class="feature-card"><span class="feature-number">01</span><h3>空间查询</h3><p>搜索、筛选、收藏，还能新增和修改自己的临时空间。</p><a class="stretched-link mt-3 d-inline-block" href="spaces.html">查看空间</a></article></div>
+          <div class="col-md-6 col-xl"><article class="feature-card"><span class="feature-number">02</span><h3>学习计划</h3><p>添加、编辑、完成和删除计划，并按状态快速筛选。</p><a class="stretched-link mt-3 d-inline-block" href="plans.html">管理计划</a></article></div>
+          <div class="col-md-6 col-xl"><article class="feature-card"><span class="feature-number">03</span><h3>数据洞察</h3><p>用折线图、环形图和柱状图呈现不同角度的数据。</p><a class="stretched-link mt-3 d-inline-block" href="insights.html">查看图表</a></article></div>
+          <div class="col-md-6 col-xl"><article class="feature-card"><span class="feature-number">04</span><h3>三维校园</h3><p>拖动、缩放并点击地标，理解学习空间的大致位置。</p><a class="stretched-link mt-3 d-inline-block" href="campus.html">浏览场景</a></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="noticeTitle">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+          <div class="section-heading mb-0"><p class="eyebrow">Campus notes</p><h2 id="noticeTitle">今日提醒</h2><p class="mb-0" id="dataUpdated">数据更新时间：—</p></div>
+          <a class="btn btn-outline-brand" href="insights.html">继续查看数据</a>
+        </div>
+        <div class="row g-3" id="noticeList"><div class="col-12"><div class="empty-state">公告读取中……</div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>© <span data-current-year></span> 云大学习空间助手</span><span>课程期末大作业 · 数据仅作教学演示</span></div></footer>
+  <script src="libs/bootstrap-5.3.8.bundle.min.js" defer></script>
+  <script src="libs/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+</body>
+</html>
+

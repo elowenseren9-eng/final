@@ -1,0 +1,29 @@
+{
+  "title": "云大学习空间助手",
+  "updated": "2026-10-08",
+  "source": "课程数据集与本项目补充的教学演示数据，非实时业务统计",
+  "announcements": [
+    {"date":"10-08","level":"提醒","title":"图书馆三楼座位较紧张","detail":"演示数据中的使用率超过 95%，可优先查看楠苑或理科楼。"},
+    {"date":"10-09","level":"活动","title":"学习计划交流会","detail":"地点：梓苑共享空间；时间：19:00。"},
+    {"date":"10-10","level":"维护","title":"梓苑二楼暂停开放","detail":"设备维护期间请改用一楼自习室。"}
+  ],
+  "weekFlow": {"labels":["周一","周二","周三","周四","周五","周六","周日"],"values":[428,506,552,491,615,382,344]},
+  "studyTypes": [
+    {"name":"课程复习","value":36},
+    {"name":"项目实践","value":28},
+    {"name":"考研备考","value":22},
+    {"name":"阅读写作","value":14}
+  ],
+  "timeSlots": [
+    {"name":"08:00","value":38},{"name":"10:00","value":57},{"name":"12:00","value":43},
+    {"name":"14:00","value":68},{"name":"16:00","value":81},{"name":"18:00","value":63},
+    {"name":"20:00","value":89},{"name":"22:00","value":49}
+  ],
+  "landmarks": [
+    {"id":"library","name":"图书馆","description":"主要学习资源与安静自习空间。","color":"#e7d7b8","x":-3.3,"z":0.4,"height":2.8},
+    {"id":"science","name":"理科楼","description":"包含通宵自习室和实验教学空间。","color":"#b7d8cf","x":2.8,"z":-1.2,"height":3.8},
+    {"id":"clock","name":"东陆钟楼","description":"用基础几何体搭建的校园地标。","color":"#efb84c","x":0,"z":2.5,"height":5.4},
+    {"id":"arts","name":"文科楼","description":"提供普通自习区与考研自习室。","color":"#d6c3e6","x":3.8,"z":3.1,"height":2.5}
+  ]
+}
+
