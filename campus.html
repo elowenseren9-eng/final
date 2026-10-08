@@ -12,7 +12,7 @@
     <div class="page-main"><div class="container">
       <div id="campusStatus" class="status-banner mb-4" role="status" aria-live="polite">正在读取三维地标数据……</div>
       <div class="row g-4">
-        <div class="col-xl-9"><section class="scene-shell" aria-labelledby="sceneTitle"><div class="scene-help"><strong id="sceneTitle">操作说明</strong><span>鼠标拖动旋转 · 滚轮缩放 · 点击建筑选择地标</span></div><div id="campusScene" tabindex="0" role="application" aria-label="可交互的三维校园场景"></div></section></div>
+        <div class="col-xl-9"><section class="scene-shell" aria-labelledby="sceneTitle"><div class="scene-help"><h2 class="h6 mb-1" id="sceneTitle">操作说明</h2><span>鼠标拖动旋转 · 滚轮缩放 · 点击建筑选择地标</span></div><div id="campusScene" tabindex="0" role="application" aria-label="可交互的三维校园场景"></div></section></div>
         <div class="col-xl-3"><aside class="panel h-100" aria-labelledby="landmarkName"><p class="eyebrow">Selected place</p><h2 id="landmarkName">校园全景</h2><p id="landmarkDescription">场景加载后可选择建筑查看说明。</p><hr><div class="form-check form-switch mb-3"><input class="form-check-input" id="autoRotate" type="checkbox"><label class="form-check-label" for="autoRotate">自动缓慢旋转</label></div><button class="btn btn-outline-brand w-100" id="resetScene" type="button">恢复全景视角</button><h3 class="h6 mt-4">地标快捷入口</h3><div class="landmark-buttons" id="landmarkButtons"></div></aside></div>
       </div>
       <section class="panel mt-4" aria-labelledby="fallbackTitle"><h2 id="fallbackTitle">文字版地标清单</h2><p class="chart-note">即使浏览器不支持 WebGL，地点名称和说明仍然可以阅读。</p><div class="row g-3" id="landmarkTextList"></div></section>

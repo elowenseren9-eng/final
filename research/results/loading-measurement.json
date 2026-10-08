@@ -1,0 +1,64 @@
+{
+  "blocking": {
+    "environment": "Chrome headless，禁用缓存，40 ms 延迟，约 2.56 Mbps 下载速度",
+    "runs": [
+      {
+        "domInteractive": 5858.70000000298,
+        "domContentLoaded": 5859.5,
+        "load": 5860.30000000447,
+        "probeExecutedAt": 5858.4000000059605,
+        "dependenciesReady": true
+      },
+      {
+        "domInteractive": 5808.39999999851,
+        "domContentLoaded": 5809.19999999553,
+        "load": 5810,
+        "probeExecutedAt": 5808.10000000149,
+        "dependenciesReady": true
+      },
+      {
+        "domInteractive": 5810.60000000149,
+        "domContentLoaded": 5811,
+        "load": 5811.39999999851,
+        "probeExecutedAt": 5810.39999999851,
+        "dependenciesReady": true
+      }
+    ],
+    "median": {
+      "domInteractive": 5810.60000000149,
+      "domContentLoaded": 5811,
+      "load": 5811.39999999851
+    }
+  },
+  "defer": {
+    "environment": "Chrome headless，禁用缓存，40 ms 延迟，约 2.56 Mbps 下载速度",
+    "runs": [
+      {
+        "domInteractive": 79.5,
+        "domContentLoaded": 5830.60000000149,
+        "load": 5830.89999999851,
+        "probeExecutedAt": 5830.39999999851,
+        "dependenciesReady": true
+      },
+      {
+        "domInteractive": 82.5,
+        "domContentLoaded": 5875.10000000149,
+        "load": 5875.29999999702,
+        "probeExecutedAt": 5874.89999999851,
+        "dependenciesReady": true
+      },
+      {
+        "domInteractive": 83.79999999701977,
+        "domContentLoaded": 5886.39999999851,
+        "load": 5886.70000000298,
+        "probeExecutedAt": 5886.29999999702,
+        "dependenciesReady": true
+      }
+    ],
+    "median": {
+      "domInteractive": 82.5,
+      "domContentLoaded": 5875.10000000149,
+      "load": 5875.29999999702
+    }
+  }
+}
